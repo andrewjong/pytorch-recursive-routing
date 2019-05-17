@@ -1,10 +1,15 @@
 from .base_learner import BaseLearner
+from . import networks
 
 
 class RoutingLearner(BaseLearner):
 
     def __init__(self, opt):
         super().__init__(opt)
+
+        self.nets = [
+            networks.NLayerFunction(opt.) for _ in range()
+        ]
 
     def set_input(self, input):
         # unpack the input
