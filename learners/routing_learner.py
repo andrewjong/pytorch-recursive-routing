@@ -7,8 +7,9 @@ class RoutingLearner(BaseLearner):
     def __init__(self, opt):
         super().__init__(opt)
 
+
         self.nets = [
-            networks.NLayerFunction(opt.) for _ in range()
+            networks.NLayerFunction(opt.input_dim) for _ in range(opt.n_functions)
         ]
 
     def set_input(self, input):

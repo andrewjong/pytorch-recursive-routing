@@ -29,6 +29,9 @@ class BaseOptions:
             help="how many functions to create for the router should choose from",
         )
         parser.add_argument(
+            "--input_dim", type=int, default=300, help="dimension of the input vector"
+        )
+        parser.add_argument(
             "--data_threads", default=4, type=int, help="number of threads to load data"
         )
         parser.add_argument("--loss", help="what loss function to use")
